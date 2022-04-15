@@ -14,9 +14,12 @@ def hint(help):
   print(help)
   
 def guessFunc(maxNum, rnd):
-
   print("Guess a number between 0 and " + str(maxNum))
-  guess = int(input()) 
+  guess = input()
+  if not isinstance(guess, int):
+    print("That is not the correct variable type.")
+    guessFunc(maxNum, rnd)
+    
   if guess > maxNum:
     print("Your guess is higher then your max value dumby! In case you need a reminder, you max number is " + str(maxNum))
     guessFunc(maxNum, rnd)
@@ -46,7 +49,3 @@ def game(maxNum, rnd, guess):
     hint(str(guess) + " is higher then the nubmer you are looking for.")
     guessFunc(maxNum, rnd)
 start()
-
-"""
-I tried my best to implament assert and try. However it did not work. I wanted to make it so that instaed of using a if to check if guess is alrger then maxNum. How ever it did not work
-"""

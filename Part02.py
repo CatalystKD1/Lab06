@@ -5,6 +5,8 @@ def hypotenus(a, b):
   c = round(c, 2)
   print("The hypotenus is " + str(c) + ".")
 a = float(input("Input first side: "))
+# I found that the algorithm I fitted more for this program then isistance 
+# I have since realized that isinstance would work better because I can use it in if statements
 try:
   if a < int(a + 1) and a > int(a):
     b = float(input("Input second side: "))

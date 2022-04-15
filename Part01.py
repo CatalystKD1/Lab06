@@ -2,8 +2,10 @@ def is_numeric(j):
   print(str(j) + " Variable has a number value!")
   
 try:
-  #technically TRY returns a TRUE because otherwise it would not work. If this loop hole is not the proper way please let me know
+  #I added the try before doing thr isinstance. I wanted to test a method of finding a int I found effective. This is a algorithm yo print a int without the .0 at the end. It also sorts the ints froms floats
   j = float(input("Write something down: "))
+  print("Is " + str(j) + " a float? " + str(isinstance(j, float)))
+  print("Is " + str(j) + " a int? " + str(isinstance(j, int)))
   if j < int(j + 1) and j > int(j):
     is_numeric(j)
   else:
